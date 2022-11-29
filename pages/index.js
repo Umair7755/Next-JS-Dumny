@@ -3,7 +3,7 @@ const Home = (props) => {
   console.log(MyData);
   return (
     <div style={{textAlign:"center"}}>
-    <h1>Home</h1>
+    <h1>Next JS</h1>
     {MyData.map((item)=>{
       return(
         <>
