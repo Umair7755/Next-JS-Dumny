@@ -1,6 +1,20 @@
 const Home = (props) => {
-  console.log(props.MyData);
-  return <h1>Home</h1>;
+  const {MyData} = props
+  console.log(MyData);
+  return (
+    <div style={{textAlign:"center"}}>
+    <h1>Home</h1>
+    {MyData.map((item)=>{
+      return(
+        <>
+        <h3>{item?.name}</h3>
+        <p>{item?.email}</p>
+        </>
+      )
+    })}
+    </div>
+  );
+  
 };
 
 export async function getServerSideProps(context) {
